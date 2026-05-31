@@ -5,6 +5,8 @@ import { logger } from './utils/logger.js';
 import { errorMiddleware, requestLoggerMiddleware } from './middlewares/errorMiddleware.js';
 import bookRoutes from './routes/bookRoutes.js';
 import issuanceRoutes from './routes/issuanceRoutes.js';
+import memberRoutes from './routes/memberRoutes.js';
+import referenceRoutes from './routes/referenceRoutes.js';
 
 dotenv.config();
 
@@ -21,6 +23,8 @@ app.get('/health', (req: Request, res: Response) => {
 // I am organizing all business logic routes under their respective path prefixes to maintain a clean and scalable API structure.
 app.use('/api/books', bookRoutes);
 app.use('/api/issuances', issuanceRoutes);
+app.use('/api/members', memberRoutes);
+app.use('/api/reference', referenceRoutes);
 
 // Error handling middleware (must be last)
 app.use(errorMiddleware);
