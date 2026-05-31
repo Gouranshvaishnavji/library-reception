@@ -1,0 +1,16 @@
+{
+  "name": "library-reception",
+  "version": "1.0.0",
+  "description": "this is a application that can give data on available books based on there respective category, collection, issuances, authors and genre in addition to issuing and collecting the book to user.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "cors": "^2.8.6",
+    "dotenv": "^17.4.2",
+    "express": "^5.2.1"
+  }
+}
